@@ -1,5 +1,18 @@
 <link rel="import" href="../polymer/polymer.html">
- 
+ <!--
+`t-home-header` is an app header component. It is ideally in the home page of the app with a logo in it
+
+Example:
+
+    <t-home-header label="Home Search"></t-home-header>
+
+### Styling
+  
+  * {
+       --header-font-family: --primary-font-family;
+       --header-font-size: 26px
+  }
+-->
 <dom-module id="t-home-header">
     <template>
         <style>
@@ -48,19 +61,30 @@ Polymer({
 
     properties: {
 
-
+        /**
+        * Put the src of the logo you want to put in the header.
+        * @default http://dev-capi.tavisca.com/NewUI/eva/Air/images/main-logo.png
+        */
         src: {
             type: String,
             reflectToAttribute: true,
             value: 'http://dev-capi.tavisca.com/NewUI/eva/Air/images/main-logo.png'
         },
 
+
+        /**
+        * Put the url where you want to redirect to, when clicked on the logo.
+        */
         logoUrl: {
             type: String,
             reflectToAttribute: true,
             value: '/'
         },
 
+
+        /**
+        * Put the label of the header component.
+        */
         label: {
             type: String,
             reflectToAttribute: true,
